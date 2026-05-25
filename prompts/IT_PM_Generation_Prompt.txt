@@ -1,0 +1,248 @@
+Create a production-grade, fully offline, single-file HTML application called "IT Project Manager Workspace" for a project manager managing multiple IT projects. The final output must be ONE standalone .html file with all CSS and JavaScript embedded. Do not use external CDN files, external JavaScript, external CSS, proprietary corporate templates, or company-specific data structures. The design must be modern, sleek, clean, highly responsive, and easy to use.
+
+Primary objective:
+Build one PM workspace that combines Fixed Bid/Waterfall project control, Agile Scrum/T&M execution, Hybrid delivery traceability, budget tracking, team/resource management, RAID management, project-level reporting, all-project summary reporting, and offline AI-style predictive analytics.
+
+User persona:
+The tool is exclusively for an IT Project Manager. Do not add role-switching dropdowns such as Delivery Lead, PMO, Portfolio Lead, Program Manager, etc. The PM may manage multiple projects of different operating models.
+
+Project operating models:
+1. Fixed Bid / Waterfall: Use this when deliverables, timelines, cost, scope and acceptance criteria are mostly fixed. It must enable WBS task creation, dynamic Gantt, MS Project-style task hierarchy, dependencies, baseline, critical path and earned value style controls.
+2. Agile Scrum / Time & Material: Use this when scope evolves sprint-by-sprint. It must enable product backlog, sprint creation, user stories, story points, sprint board, Kanban columns, burndown, burnup and velocity.
+3. Hybrid: Enable both fixed WBS/Gantt and Scrum board. Add a Hybrid Links section to connect Scrum stories to fixed WBS deliverables.
+
+Navigation and UX:
+- Use a top project dropdown to select the active project.
+- Keep all-project summary separate from selected-project sections.
+- Use grouped dropdown menus, not a long horizontal menu that overflows the screen.
+- Suggested menu groups:
+  - All Projects: Summary, Register
+  - Project Work: Cockpit, Fixed Plan/Gantt, Sprint Board, Hybrid Links, Budget, Team, RAID, Reports, AI Prediction
+  - Setup & Guide: Masters, Help, Appendix, Code Whitepaper
+- Project-scoped sections must be disabled or show a friendly prompt if no project is selected.
+- Gantt is available only for Fixed Bid/Waterfall and Hybrid projects.
+- Sprint Board is available only for Agile Scrum/T&M and Hybrid projects.
+- Hybrid Links is available only for Hybrid projects.
+- Use light positive theme by default. Add theme options: Light Positive, Mint Calm, Techno Light, Dark Command, Hi-Tech Dark.
+- Use compact typography, about 1px smaller than default enterprise dashboards.
+- Use clean cards, rounded corners, soft shadows, white/light gradients, blue/teal/green accents.
+- Support responsive layouts for desktop, tablet and mobile.
+- Add tooltips and help icons for formulas, report meanings and AI scores.
+- Add a floating quick calculator.
+- Add global search for projects, tasks, stories and risks.
+- Add backup and restore controls.
+
+Fixed Bid / Waterfall module:
+Implement a dynamic Gantt chart driven by an automated scheduling engine, not a static timeline. It must include:
+- Split-screen WBS task table on the left and timeline graph on the right.
+- WBS nesting with summary tasks, normal tasks and milestones.
+- Custom fields: WBS, task name, type, duration, start, finish, percent complete, assignee, predecessor string, task cost and notes.
+- Task creation and editing modals.
+- Dependencies: Finish-to-Start, Start-to-Start, Finish-to-Finish and Start-to-Finish.
+- Lead and lag syntax such as 1.2FS+2, 2.1SS+0, 3FF-1, 4SF+3.
+- Automatic recalculation of successor dates when a predecessor date/duration changes.
+- CPM logic: forward pass, backward pass, early start/finish, late start/finish, total float.
+- Highlight zero-float critical path tasks in red.
+- Baseline save and baseline comparison. Show saved baseline bars underneath live bars.
+- Show today line.
+- Show dependency connector lines and dependency labels.
+- Allow basic horizontal drag of live bars to shift task dates, then recalculate downstream tasks.
+- Add PDF/print export for the selected-project Gantt.
+
+Agile Scrum/T&M module:
+Implement a Scrum board with:
+- Product backlog.
+- Sprint creation and active sprint selection.
+- User story creation with epic, story title, points, priority, status, assignee, blocker flag and optional WBS link.
+- Kanban workflow: Backlog, To Do, In Progress, In Review, Done.
+- Drag-and-drop story cards between columns.
+- Story points.
+- Sprint goal fields if possible.
+- Burndown chart.
+- Burnup chart.
+- Velocity chart.
+- Cumulative flow chart.
+- Blocker and aging indicators.
+- Sprint failure risk prediction.
+
+Hybrid module:
+- Show both WBS/Gantt and Scrum sections.
+- Add a Hybrid Links view that links stories to WBS deliverables or milestones.
+- Show which fixed deliverables are supported by which agile stories.
+- Use traceability reports and warnings when fixed deliverables have no linked agile implementation stories.
+
+Budget module:
+Selected-project only. Support:
+- Budget categories from master data.
+- CAPEX/OPEX style category tagging where possible.
+- Planned, actual and forecast cost.
+- Resource cost, license cost, infrastructure/cloud cost, vendor cost, travel, training and contingency.
+- Task-level planned/actual cost for WBS tasks.
+- Budget summary KPIs.
+- EVM style calculations: BAC, PV, EV, AC, SPI, CPI, SV, CV, EAC, ETC, VAC.
+- Budget waterfall chart.
+- Planned vs actual vs forecast charts.
+
+Team/resource module:
+- Global resource master with name, designation, location, skills, rate, capacity and availability.
+- Project-specific team selection.
+- Resource allocation, utilization and capacity views.
+- Quick-add resource from task/story creation, without forcing the PM to leave the work planning flow.
+- Resource cost charts, utilization charts, bubble charts and overload alerts.
+
+RAID module:
+Selected-project only. Include:
+- Risks, assumptions, issues, dependencies and actions.
+- Risk category, probability, impact, score, owner, mitigation/response plan and status.
+- 5x5 risk matrix heatmap.
+- Risk bubble chart.
+- Issue aging chart.
+- Escalation signals.
+
+All-project summary:
+This must be separate from selected-project work. Include sub-tabs:
+- Overview
+- Charts
+- Reports
+- Budget
+- Resources
+- Risks
+- AI Prediction
+The summary must show consolidated KPIs, project register snapshot, project model mix, project health, portfolio budget, resource load, risk exposure, delivery attention funnel and portfolio AI prediction.
+
+Project Reports:
+Reports must be selected-project only and change when the top project dropdown changes. Include a rich mixture of basic and advanced charts:
+- Gauge charts
+- Donut/pie charts
+- Bar charts
+- Grouped bar charts
+- Horizontal bar charts
+- Area/line trend charts
+- Multi-line charts
+- Radar charts
+- Heatmaps
+- Bubble/scatter charts
+- Treemap charts
+- Funnel charts
+- Waterfall charts
+- Timeline charts
+- Lollipop charts
+- Stacked workflow charts
+- Dependency network chart
+Report categories must align with PMBOK and Agile/Scrum:
+- Integration/scope report
+- Schedule report
+- Cost/EVM report
+- Resource report
+- Quality report
+- Risk/RAID report
+- Stakeholder/governance report
+- Agile burndown/burnup/velocity report
+- Sprint health report
+- Hybrid traceability report
+- Forecast and variance report
+
+AI Prediction:
+Must exist in two places:
+1. Overall Summary AI Prediction for all projects.
+2. Selected Project AI Prediction for the active project.
+Use local JavaScript logic only. No external AI APIs. Predictions should feel like AI assistance and include:
+- Delivery confidence score.
+- Schedule slippage probability.
+- Budget overrun probability.
+- Risk escalation probability.
+- Resource overload/burnout signal.
+- Sprint failure prediction.
+- Critical path warning.
+- Dependency conflict detection.
+- Auto-generated PM summary.
+- Smart recommendations.
+- AI action funnel.
+- Prediction radar and trend charts.
+
+Master data:
+Add a master section where the PM can add/edit/delete dropdown values such as currency, location, project model, status, risk category, task status, sprint status, designation, budget category and tags. These values should be used globally where applicable.
+
+Help section:
+Make Help detailed, not basic. Include:
+- Start-to-finish workflow.
+- How to create a project.
+- How to select the operating model.
+- How to use the top project dropdown.
+- How to use all-project summary vs selected-project sections.
+- How to build a WBS and Gantt.
+- How to use dependency syntax.
+- How to save and review baseline.
+- How to run Scrum sprints.
+- How to use Hybrid Links.
+- How to define budget and team.
+- How to review reports.
+- How to interpret AI Prediction.
+- Do's and don'ts.
+- Industry best practices based on PMBOK and agile delivery.
+- Screenshot-style cards or actual screenshots embedded in the guide.
+
+Appendix:
+Include detailed formulas and interpretations:
+- EV, PV, AC, BAC, SPI, CPI, SV, CV, EAC, ETC, VAC.
+- Risk score = probability x impact.
+- Critical path and total float formulas.
+- Dependency logic for FS, SS, FF, SF with lead/lag.
+- Baseline slippage formula.
+- Velocity, burndown, burnup, sprint failure risk.
+- Resource utilization and overload logic.
+- Health score and AI confidence score.
+- Chart interpretation guide.
+
+Codebase whitepaper section:
+Add an in-app section explaining:
+- Technology used: HTML5, CSS3, Vanilla JavaScript.
+- No external libraries, or list any third-party libraries if used.
+- How charts are rendered.
+- How local data is stored.
+- How JSON backup/import works.
+- How PDF export works using browser print/save as PDF.
+- Data privacy and offline behavior.
+- Browser support.
+- Suggested code modules if later split: app state, data layer, scheduling engine, agile engine, reporting engine, AI engine, export utilities and UI components.
+
+Persistence:
+- Use browser localStorage or IndexedDB.
+- Persist after refresh and reopen in the same browser profile.
+- Include JSON backup/export and import/restore.
+- Include CSV export where useful.
+
+Export:
+- Export selected project report to browser print/save as PDF.
+- Export all-project summary to browser print/save as PDF.
+- Export selected project Gantt to browser print/save as PDF.
+- Export JSON backup and restore.
+- Optional CSV export.
+
+Sample data:
+Preload realistic IT sample data with:
+- One Fixed Bid/Waterfall project.
+- One Agile Scrum/T&M project.
+- One Hybrid project.
+- Resources.
+- WBS tasks.
+- Sprints.
+- Stories.
+- Budget lines.
+- Risks.
+- Dependencies.
+- Baseline data.
+The sample data should demonstrate all charts and reports immediately.
+
+Quality checks before final output:
+- The HTML must run offline.
+- No external script src.
+- No external stylesheet link.
+- JavaScript syntax must be valid.
+- Gantt, Scrum board, Budget, Team, Reports and AI must be project-scoped.
+- Summary must be consolidated only.
+- The menu must not overflow the screen; use grouped dropdowns.
+- Charts must not look compressed.
+- Charts must animate subtly and show values on hover using tooltips.
+- Responsive mobile view must be usable.
+- Default theme must be light and positive.
