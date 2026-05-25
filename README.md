@@ -96,7 +96,7 @@ No installation, server, login, or internet connection is required after the fil
 
 After the repository owner enables GitHub Pages, open:
 
-`[ADD_GITHUB_PAGES_URL_HERE]`
+`https://github.com/daip85/offline-it-project-manager-workspace/`
 
 The app still stores your working data locally in your browser.
 
