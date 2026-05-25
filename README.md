@@ -82,8 +82,6 @@ The tool includes browser-based prediction logic. It is not a cloud AI service a
 
 ## How to use
 
-### Option 1 — Download and run locally
-
 1. Go to **Releases**.
 2. Download `index.html` from the latest release.
 3. Double-click the file or open it in a modern browser.
@@ -92,13 +90,7 @@ The tool includes browser-based prediction logic. It is not a cloud AI service a
 
 No installation, server, login, or internet connection is required after the file is downloaded.
 
-### Option 2 — Use GitHub Pages
-
-After the repository owner enables GitHub Pages, open:
-
-`https://github.com/daip85/offline-it-project-manager-workspace/`
-
-The app still stores your working data locally in your browser.
+The HTML app still stores your working data locally in your browser.
 
 ---
 
